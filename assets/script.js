@@ -21,23 +21,27 @@ function getKindsOfCharacters() {
   var specialCharactersString = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
   var lowercaseCharactersString = "abcdefghijklmnopqrstuvwxyz";
   var uppercaseCharactersString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var numericCharactersString = "0123456789";
-  var stringOfChosenCharacters;
+  var numericCharactersString = "012345678901234567890123456789";
+  var stringOfChosenCharacters ='';
   var specialCharactersOption = confirm("Press OK, if you'd like to include special characters in the password.");
   if (specialCharactersOption == true) {
     stringOfChosenCharacters = specialCharactersString;
+    console.log(stringOfChosenCharacters);
   }; 
   var lowercaseCharactersOption = confirm("Press OK, if you'd like to include lowercase in the password.");
   if (lowercaseCharactersOption == true) {
-    stringOfChosenCharacters = stringOfChosenCharacters + lowercaseCharactersString;
+    stringOfChosenCharacters = stringOfChosenCharacters+lowercaseCharactersString;
+    console.log(stringOfChosenCharacters);
   };
   var uppercaseCharactersOption = confirm("Press OK, if you'd like to include uppercase in the password.");
   if (uppercaseCharactersOption == true) {
     stringOfChosenCharacters = stringOfChosenCharacters + uppercaseCharactersString;
+    console.log(stringOfChosenCharacters);
   };
   var numericCharactersOption = confirm("Press OK, if you'd like to include numbers in the password.");
   if (numericCharactersOption == true) {
     stringOfChosenCharacters = stringOfChosenCharacters + numericCharactersString;
+    console.log(stringOfChosenCharacters);
   };
   //check if user choose at least one kind of character:
   if (!specialCharactersOption && !lowercaseCharactersOption && !uppercaseCharactersOption && !numericCharactersOption) {
